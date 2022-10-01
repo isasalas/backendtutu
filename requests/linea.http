@@ -1,0 +1,37 @@
+@api = http://localhost:3000/api/linea
+
+### get lineas
+GET {{api}}
+
+### create linea
+POST {{api}}
+Content-Type: application/json
+
+{
+    "id":2,
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 1
+}
+
+### update linea
+PUT {{api}}/scr-67
+Content-Type: application/json
+
+{
+    "name": "linea 677",
+    "direction": "salas",
+    "phone": "70881108"
+}
+
+### delete linea
+DELETE {{api}}/15
+
+### get linea
+GET {{api}}/14
+
+
+

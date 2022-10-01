@@ -1,0 +1,269 @@
+@role = http://localhost:3000/api/role
+@user = http://localhost:3000/api/user
+@linea = http://localhost:3000/api/linea
+
+
+//////////////////////////////////////////////////////////////////////
+
+### create role system
+POST {{role}}
+Content-Type: application/json
+
+{
+    "id":0,
+    "name": "system",
+    "description": "blabla"
+}
+
+### create role admin
+POST {{role}}
+Content-Type: application/json
+
+{
+    "id":1,
+    "name": "admin",
+    "description": "blabla"
+}
+
+### create role control
+POST {{role}}
+Content-Type: application/json
+
+{
+    "id":2,
+    "name": "control",
+    "description": "blabla"
+}
+
+### create role socio
+POST {{role}}
+Content-Type: application/json
+
+{
+    "id":3,
+    "name": "socio",
+    "description": "blabla"
+}
+
+### create role conductor
+POST {{role}}
+Content-Type: application/json
+
+{
+    "id":4,
+    "name": "conductor",
+    "description": "blabla"
+}
+
+### create role pasajero
+POST {{role}}
+Content-Type: application/json
+
+{
+    "id":5,
+    "name": "pasajero",
+    "description": "blabla"
+}
+//////////////////////////////////////////////////////////////////////
+### create linea
+POST {{linea}}
+Content-Type: application/json
+
+{
+    "id":"scr-58",
+    "name": "linea 58",
+    "direction": "blabla",
+    "phone": "70881108"
+}
+
+### create linea 
+POST {{linea}}
+Content-Type: application/json
+
+{
+    "id":"scr-67",
+    "name": "linea 67",
+    "direction": "blabla",
+    "phone": "70881108"
+}
+
+### create linea 
+POST {{linea}}
+Content-Type: application/json
+
+{
+    "id":"scr-30",
+    "name": "linea 30",
+    "direction": "blabla",
+    "phone": "70881108"
+}
+
+### create linea 
+POST {{linea}}
+Content-Type: application/json
+
+{
+    "id":"scr-55",
+    "name": "linea 30",
+    "direction": "blabla",
+    "phone": "70881108"
+}
+
+### create linea 
+POST {{linea}}
+Content-Type: application/json
+
+{
+    "id":"scr-121",
+    "name": "linea 30",
+    "direction": "blabla",
+    "phone": "70881108"
+}
+
+
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"0",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 0
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"1",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 1
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"2",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 2
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"3",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 3
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"4",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 5
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"5",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 4
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"6",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 3
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"7",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 2
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"8",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 1
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"9",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 0
+}
+
+//////////////////////////////////////////////////////////////////////

@@ -1,0 +1,38 @@
+@api = http://localhost:3000/api/interno
+
+### get internos
+GET {{api}}
+
+### create interno
+POST {{api}}
+Content-Type: application/json
+
+{
+    "id":2,
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": 1
+}
+
+### update interno
+PUT {{api}}/16
+Content-Type: application/json
+
+{
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com"
+}
+
+### delete interno
+DELETE {{api}}/15
+
+### get interno
+GET {{api}}/14
+
+
+

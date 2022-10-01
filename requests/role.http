@@ -1,0 +1,32 @@
+@api = http://localhost:3000/api/role
+
+### get roles
+GET {{api}}
+
+### create role
+POST {{api}}
+Content-Type: application/json
+
+{
+    "id":3,
+    "name": "isaias",
+    "description": "salas"
+}
+
+### update role
+PUT {{api}}/0
+Content-Type: application/json
+
+{
+    "name": "system",
+    "description": "administrador del sistema"
+}
+
+### delete role
+DELETE {{api}}/2
+
+### get role
+GET {{api}}/0
+
+
+
