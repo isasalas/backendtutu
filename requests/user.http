@@ -1,7 +1,15 @@
 @api = http://localhost:3000/api/user
 
+### get users Role
+GET {{api}}/role
+### get users lgin
+GET {{api}}/login
+
 ### get users
 GET {{api}}
+
+### get users
+GET {{api}}/trabajo
 
 ### create user
 POST {{api}}
@@ -15,8 +23,6 @@ Content-Type: application/json
     "email": "salas@gmial.com",
     "password": "salas",
     "roleId": 0
-
-    
 }
 ### create user
 POST {{api}}
@@ -49,7 +55,14 @@ Content-Type: application/json
 DELETE {{api}}/0
 
 ### get user
-GET {{api}}/14
+GET {{api}}/isaiassalas
 
+### get user
+POST {{api}}/login
+Content-Type: application/json
 
+{
+    "id": "isaiassalas6",
+    "password": "salas"
+}
 

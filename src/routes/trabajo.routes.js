@@ -1,7 +1,7 @@
 import { Router } from "express";
 import {
     createTrabajo,
-    getTrabajos,
+    getTrabajos, 
     updateTrabajo,
     deleteTrabajo,
     getTrabajo,

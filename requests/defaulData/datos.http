@@ -1,0 +1,253 @@
+@role = http://localhost:3000/api/role
+@user = http://localhost:3000/api/user
+@linea = http://localhost:3000/api/linea
+@interno = http://localhost:3000/api/interno
+@trabajo = http://localhost:3000/api/trabajo
+
+
+//////////////////////////////////////////////////////////////////////
+
+### create role system
+POST {{role}}
+Content-Type: application/json
+
+{
+    "id":"1",
+    "name": "admin",
+    "description": "blabla"
+}
+
+
+### create role control
+POST {{role}}
+Content-Type: application/json
+
+{
+    "id":"2",
+    "name": "user",
+    "description": "blabla"
+}
+
+//////////////////////////////////////////////////////////////////////
+### create linea
+POST {{linea}}
+Content-Type: application/json
+
+{
+    
+    "name": "linea 58",
+    "description": "blabla",
+    "directionLat": -17.871478,
+    "directionLon": -63.141013,
+    "colorPr": "F29100",
+    "colorBg": "EBEBEB",
+    "phone": "70881108"
+}
+
+### create linea 
+POST {{linea}}
+Content-Type: application/json
+
+{
+    
+    "name": "linea 67",
+    "description": "blabla",
+    "directionLat": -17.871478,
+    "directionLon": -63.141013,
+    "colorPr": "F29100",
+    "colorBg": "EBEBEB",
+    "phone": "70881108"
+}
+
+### create linea 
+POST {{linea}}
+Content-Type: application/json
+
+{
+    
+    "name": "linea 30",
+    "description": "blabla",
+    "directionLat": -17.871478,
+    "directionLon": -63.141013,
+    "colorPr": "F29100",
+    "colorBg": "EBEBEB",
+    "phone": "70881108"
+}
+
+### create linea 
+POST {{linea}}
+Content-Type: application/json
+
+{
+    
+    "name": "linea 30",
+    "description": "blabla",
+    "directionLat": -17.871478,
+    "directionLon": -63.141013,
+    "colorPr": "F29100",
+    "colorBg": "EBEBEB",
+    "phone": "70881108"
+}
+
+### create linea 
+POST {{linea}}
+Content-Type: application/json
+
+{
+    
+    "name": "linea 30",
+    "description": "blabla",
+    "directionLat": -17.871478,
+    "directionLon": -63.141013,
+    "colorPr": "F29100",
+    "colorBg": "EBEBEB",
+    "phone": "70881108"
+}
+
+
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"isaiassalas",
+    "name": "isaias",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": "1"
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"isaiassalas1",
+    "name": "isaias1",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": "1"
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"isaiassalas2",
+    "name": "isaias2",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": "2"
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"isaiassalas3",
+    "name": "isaias3",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": "2"
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"isaiassalas4",
+    "name": "isaias4",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": "2"
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"isaiassalas5",
+    "name": "isaias5",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": "2"
+}
+
+### create user
+POST {{user}}
+Content-Type: application/json
+
+{
+    "id":"isaiassalas6",
+    "name": "isaias6",
+    "lastname": "salas",
+    "phone": "70881108",
+    "email": "salas@gmial.com",
+    "password": "salas",
+    "roleId": "2"
+}
+
+
+//////////////////////////////////////////////////////////////////////
+
+### create interno
+POST {{interno}}
+Content-Type: application/json
+
+{
+    "name": "12",
+    "userId": "isaiassalas",
+    "lineaId": "1"
+}
+
+
+### create interno
+POST {{interno}}
+Content-Type: application/json
+
+{
+    "name": "12",
+    "userId": "isaiassalas",
+    "lineaId": "2"
+}
+
+
+### create interno
+POST {{interno}}
+Content-Type: application/json
+
+{
+    "name": "12",
+    "userId": "isaiassalas",
+    "lineaId": "2"
+}
+
+### create trabajo
+POST {{trabajo}}
+Content-Type: application/json
+
+{
+    "userId":"isaiassalas",
+    "lineaId": 3
+}

@@ -5,7 +5,7 @@ import {sequelize} from "./database/database.js"
 dotenv.config();
 
 const port = process.env.PORT;
-
+    
 async function main(){
     await sequelize.sync({force: false});
     console.log('conexcion estabelcida con pg')

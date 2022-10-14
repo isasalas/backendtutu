@@ -1,9 +1,11 @@
 import { Interno } from "../models/interno.js";
+import { User } from "../models/user.js";
 
 
 export async function getInternos(req, res) {
     try {
         const Internos = await Interno.findAll({
+            include: User,
             order: [["id", "DESC"]],
         });
         res.status(200).json(Internos);
@@ -25,15 +27,15 @@ export async function createInterno(req, res) {
 export async function updateInterno(req, res) {
     const { id } = req.params;
     try {
-        const Interno = await Interno.findOne({
+        const interno = await Interno.findOne({
             where: { id },
         });
 
-        Interno.set(req.body);
+        interno.set(req.body);
 
-        await Interno.save();
+        await interno.save();
 
-        res.status(200).json(Interno);
+        res.status(200).json(interno);
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }

@@ -5,7 +5,7 @@ import { User } from "./user.js";
 export const Role = sequelize.define(
     "role", {
     id: {
-        type: DataTypes.SMALLINT,
+        type: DataTypes.STRING,
         primaryKey: true
     },
     name: {
@@ -16,6 +16,7 @@ export const Role = sequelize.define(
     }
 }
 );
+
 Role.hasMany(User, {
     foreinkey: "roleId",
     sourceKey: "id",

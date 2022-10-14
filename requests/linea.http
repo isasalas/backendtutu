@@ -3,6 +3,12 @@
 ### get lineas
 GET {{api}}
 
+### get lineas interno
+GET {{api}}/trabajo/1
+
+### get lineas interno
+GET {{api}}/interno/2
+
 ### create linea
 POST {{api}}
 Content-Type: application/json
@@ -22,16 +28,21 @@ PUT {{api}}/scr-67
 Content-Type: application/json
 
 {
-    "name": "linea 677",
-    "direction": "salas",
-    "phone": "70881108"
+    "id":"scr-67",
+    "name": "linea 68",
+    "description": "blabla",
+    "phone": "70881108",
+    "directionLat": "-17.871478",
+    "directionLon": "-63.141013",
+    "colorPr": "F29100",
+    "colorBg": "EBEBEB"
 }
 
 ### delete linea
 DELETE {{api}}/15
 
 ### get linea
-GET {{api}}/14
+GET {{api}}/2
 
 
 

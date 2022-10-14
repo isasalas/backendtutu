@@ -1,5 +1,5 @@
 import { Trabajo } from "../models/trabajo.js";
-
+ 
 
 export async function getTrabajos(req, res) {
     try {

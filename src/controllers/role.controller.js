@@ -1,6 +1,28 @@
 import { Role } from "../models/role.js";
+import { User } from "../models/user.js";
 
 
+
+
+export async function getRoleUsers(req, res) {
+    const { id } = req.params;
+    try {
+        const role = await Role.findOne({
+            //include: User,
+            include: User ,
+            where: { id },
+        });
+        if(!role) return res.status(500).json({ message: 'no existe' });
+        res.json(role);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+}
+
+
+
+
+//////////////////////////////////////
 export async function getRoles(req, res) {
     try {
         const Roles = await Role.findAll({

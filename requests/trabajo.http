@@ -1,5 +1,5 @@
 @api = http://localhost:3000/api/trabajo
-
+ 
 ### get trabajos
 GET {{api}}
 
@@ -8,13 +8,8 @@ POST {{api}}
 Content-Type: application/json
 
 {
-    "id":2,
-    "name": "isaias",
-    "lastname": "salas",
-    "phone": "70881108",
-    "email": "salas@gmial.com",
-    "password": "salas",
-    "roleId": 1
+    "userId":"isaiassalas6",
+    "lineaId": 1 
 }
 
 ### update trabajo
@@ -29,7 +24,7 @@ Content-Type: application/json
 }
 
 ### delete trabajo
-DELETE {{api}}/15
+DELETE {{api}}/3
 
 ### get trabajo
 GET {{api}}/14

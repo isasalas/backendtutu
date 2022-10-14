@@ -8,24 +8,21 @@ POST {{api}}
 Content-Type: application/json
 
 {
-    "id":2,
-    "name": "isaias",
-    "lastname": "salas",
-    "phone": "70881108",
-    "email": "salas@gmial.com",
-    "password": "salas",
-    "roleId": 1
+    
+    "name": "12",
+    "userId": "isaiassalas2",
+    "lineaId": "1"
 }
 
 ### update interno
-PUT {{api}}/16
+PUT {{api}}/5
 Content-Type: application/json
 
 {
+    "id":"",
     "name": "isaias",
-    "lastname": "salas",
-    "phone": "70881108",
-    "email": "salas@gmial.com"
+    "userId": "isaiassalas4",
+    "lineaId": "3"
 }
 
 ### delete interno

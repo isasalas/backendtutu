@@ -1,6 +1,47 @@
+import { Interno } from "../models/interno.js";
 import { Linea } from "../models/linea.js";
+import { Trabajo } from "../models/trabajo.js";
+import { User } from "../models/user.js";
 
 
+
+export async function getLineaTrabajo(req, res) {
+
+    const { id } = req.params;
+    try {
+        const linea = await Linea.findOne({
+            include: [
+                { model: Trabajo, include: User }
+              ],
+            where: { id },
+            order: [["id", "DESC"]],
+        });
+        res.json(linea);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+}
+
+
+export async function getLineaInternos(req, res) {
+
+    const { id } = req.params;
+    try {
+        const linea = await Linea.findOne({
+            include: [
+                { model: Interno, include: User }
+              ],
+            where: { id },
+            order: [["id", "DESC"]],
+        });
+        res.json(linea);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+}
+
+
+///////////////////////////////////////////////////////////
 export async function getLineas(req, res) {
     try {
         const Lineas = await Linea.findAll({
@@ -55,10 +96,10 @@ export async function deleteLinea(req, res) {
 export async function getLinea(req, res) {
     const { id } = req.params;
     try {
-        const Linea = await Linea.findOne({
+        const linea = await Linea.findOne({
             where: { id },
         });
-        res.json(Linea);
+        res.json(linea);
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
