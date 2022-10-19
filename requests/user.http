@@ -1,15 +1,16 @@
 @api = http://localhost:3000/api/user
 
-### get users Role
-GET {{api}}/role
-### get users lgin
-GET {{api}}/login
+### get user login
+POST {{api}}/login
+Content-Type: application/json
+
+{
+    "id": "control",
+    "password": "control"
+}
 
 ### get users
 GET {{api}}
-
-### get users
-GET {{api}}/trabajo
 
 ### create user
 POST {{api}}
@@ -41,7 +42,7 @@ Content-Type: application/json
     }
 
 ### update user
-PUT {{api}}/16
+PUT {{api}}/control1
 Content-Type: application/json
 
 {
@@ -57,12 +58,28 @@ DELETE {{api}}/0
 ### get user
 GET {{api}}/isaiassalas
 
-### get user
-POST {{api}}/login
+
+
+
+
+
+
+
+
+
+
+
+### get internos
+GET {{api}}/interno
+
+
+
+### update user
+PUT {{api}}/control1
 Content-Type: application/json
 
 {
-    "id": "isaiassalas6",
-    "password": "salas"
+    "lineaId": null
 }
+
 

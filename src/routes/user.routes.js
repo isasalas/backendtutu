@@ -5,16 +5,14 @@ import {
     updateUser,
     deleteUser,
     getUser,
-    getUsersRole,
     getUserLogin,
-    getUsersTrabajo
+    getUsersInterno
 } from "../controllers/user.controller.js";
 
 const router = Router();
 
 // Routes
-router.get("/role", getUsersRole);
-router.get("/trabajo", getUsersTrabajo);
+router.get("/interno", getUsersInterno);
 router.post("/login", getUserLogin);
 router.get("/", getUsers);
 router.post("/", createUser);

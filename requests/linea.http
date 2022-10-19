@@ -4,10 +4,10 @@
 GET {{api}}
 
 ### get lineas interno
-GET {{api}}/trabajo/1
+GET {{api}}/user/1
 
-### get lineas interno
-GET {{api}}/interno/2
+### get lineas interno 
+GET {{api}}/interno/1
 
 ### create linea
 POST {{api}}

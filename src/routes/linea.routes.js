@@ -6,7 +6,7 @@ import {
     deleteLinea,
     getLinea,
     getLineaInternos,
-    getLineaTrabajo,
+    getLineaUser,
 } from "../controllers/linea.controller.js";
 
 const router = Router();
@@ -18,5 +18,5 @@ router.put("/:id", updateLinea);
 router.delete("/:id", deleteLinea);
 router.get("/:id", getLinea);
 router.get("/interno/:id", getLineaInternos);
-router.get("/trabajo/:id", getLineaTrabajo);
+router.get("/user/:id", getLineaUser);
 export default router;

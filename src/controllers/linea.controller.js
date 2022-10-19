@@ -1,27 +1,19 @@
 import { Interno } from "../models/interno.js";
 import { Linea } from "../models/linea.js";
-import { Trabajo } from "../models/trabajo.js";
 import { User } from "../models/user.js";
 
 
 
-export async function getLineaTrabajo(req, res) {
-
+export async function getLineaUser(req, res) {
     const { id } = req.params;
-    try {
-        const linea = await Linea.findOne({
-            include: [
-                { model: Trabajo, include: User }
-              ],
+    try { const linea = await Linea.findOne({
+            include:  User ,
             where: { id },
             order: [["id", "DESC"]],
         });
         res.json(linea);
-    } catch (error) {
-        return res.status(500).json({ message: error.message });
-    }
+    } catch (error) { return res.status(500).json({ message: error.message }); }
 }
-
 
 export async function getLineaInternos(req, res) {
 
@@ -39,7 +31,6 @@ export async function getLineaInternos(req, res) {
         return res.status(500).json({ message: error.message });
     }
 }
-
 
 ///////////////////////////////////////////////////////////
 export async function getLineas(req, res) {
