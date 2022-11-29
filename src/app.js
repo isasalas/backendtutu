@@ -1,13 +1,19 @@
 import express from "express";
 import morgan from "morgan";
-import  cors from "cors";
+import cors from "cors";
 
-const app = express();
+//socket.io
+import http from 'http';
+import { Server } from "socket.io";
 
 // Import routes
-import lineaRoutes from "./routes/linea.routes.js";
 import userRoutes from "./routes/user.routes.js";
 import internoRoutes from "./routes/interno.routes.js";
+import viajeRoutes from "./routes/viaje.routes.js";
+import lineaRoutes from "./routes/linea.routes.js";
+import gpsRoutes from "./routes/gps.routes.js";
+
+const app = express();
 
 // Middlewares
 app.use(morgan("dev"));
@@ -15,8 +21,30 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
+app.use("/api/viaje", viajeRoutes);
 app.use("/api/linea", lineaRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/interno", internoRoutes);
+app.use("/api/gps", gpsRoutes);
+
+//socket
+const server = http.createServer(app);
+const io = new Server(server, {
+    cors: {
+        origin: "*"
+    }
+});
+server.listen(2000, () => console.log(`spcket encendido`))
+
+
+io.on('connection', (socket) => {
+    socket.on('conectado', () => {
+        console.log('esta conectadito');
+    })
+    socket.on('location', (gps) => {
+        io.emit("gps", gps)
+        //console.log(gps);
+    })
+});
 
 export default app;

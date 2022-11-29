@@ -2,6 +2,7 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 import { Interno } from "./interno.js";
 import { User } from "./user.js";
+import { Viaje } from "./viaje.js";
 
 export const Linea = sequelize.define(
     "linea", {
@@ -65,5 +66,4 @@ Linea.hasMany(User, {
     sourceKey: "id",
 });
 User.belongsTo(Linea, { foreinkey: "lineaId", targetId: "id" });
-
 
