@@ -5,7 +5,7 @@ import {
     updateViaje,
     deleteViaje,
     getViaje
-} from "../controllers/Viaje.controller.js";
+} from "../controllers/viaje.controller.js";
 
 const router = Router();
 

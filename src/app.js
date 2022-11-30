@@ -34,7 +34,7 @@ const io = new Server(server, {
         origin: "*"
     }
 });
-server.listen(2000, () => console.log(`spcket encendido`))
+server.listen(3001, () => console.log(`socket encendido`))
 
 
 io.on('connection', (socket) => {

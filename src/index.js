@@ -8,7 +8,7 @@ const port = process.env.PORT;
     
 async function main(){
     await sequelize.sync({force: false});
-    console.log('conexcion estabelcida con pg')
+    console.log('conexion estabelcida con pg')
     app.listen(port);
     console.log('escuchando en el puerto: '+port)
 }
