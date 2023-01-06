@@ -34,6 +34,7 @@ export async function getViajeInternos(req, res) {
     }
 }*/
 
+
 ///////////////////////////////////////////////////////////
 export async function getViajes(req, res) {
     try {
@@ -43,6 +44,7 @@ export async function getViajes(req, res) {
                 { model: Interno, include: Linea}
             ],
             order: [["id", "DESC"]],
+            
         });
         res.status(200).json(viajes);
     } catch (error) {
@@ -94,6 +96,10 @@ export async function getViaje(req, res) {
     const { id } = req.params;
     try {
         const viaje = await Viaje.findOne({
+            include: [
+                { model: User},
+                { model: Interno}
+            ],
             where: { id },
         });
         res.json(viaje);

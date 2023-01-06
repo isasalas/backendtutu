@@ -16,10 +16,7 @@ export const Viaje = sequelize.define(
     timeParada: {
         type: DataTypes.INTEGER
     },
-    ida: {
-        type: DataTypes.JSON
-    },
-    vuelta: {
+    ruta: {
         type: DataTypes.JSON
     }
 }
